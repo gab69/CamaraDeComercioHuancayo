@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="/img/logo.png" alt="logo">
+        
+        <input type="checkbox" id="toggle">
+
+        <label for="toggle"> 
+            <img src="/img/menu.svg" class="menu" alt="menu">   
+        </label>
+        
+        <nav class="navigation">
+            <ul>
+
+                <!-- APARTADO LA CAMARA -->
+                <li><a href="#"> La Cámara
+                    <img class="icono" src="/img/home.svg" alt="home"></a>
+                    <ul>
+                        <li><a href="#">Nuestra Historia</a></li>   
+                        <li><a href="#">Nosotros</a></li>   
+                        <li><a href="#">Nuestras Áreas</a></li> 
+                        <li><a href="#">Nuestro Equipo</a></li>   
+                        <li><a href="#">Principios de La Camara</a>
+                            <ul>
+                                <li><a href="#">Estatuto Digital</a></li>   
+                                <li><a href="#">Código de Ética</a></li>    
+                            </ul>
+                        </li>     
+                    </ul>
+                </li>
+
+                 <!-- APARTADO NUESTROS SERVICIOS -->
+                <li><a href="#">Nuestros Servicios 
+                    <img class="icono" src="/img/maletin.svg" alt="maletin">
+                </a>
+                    <ul>
+                        <li><a href="#">Servicios</a></li>   
+                        <li><a href="#">Arbitraje</a></li>   
+                        <li><a href="#">Capacitaciones Empresariales</a></li> 
+                        <li><a href="#">Categoria De La Cámara</a></li>     
+                    </ul>
+                </li>
+                <!-- APARTADO MESA VIRTUAL -->
+                <li><a href="#">Mesa Virtual
+                    <img class="icono" src="/img/manos.svg" alt="manos">
+                </a>
+                    <ul>
+                        <li><a href="#">Iniciar Sesión</a></li>
+                        <li><a href="#">Empresas Asociadas</a></li>
+                        <li><a href="#">Pagos</a></li>
+                    </ul>
+                </li>
+                <!-- APARTADO CONTACTOS -->
+                <li><a href="#">Contactos
+                    <img class="icono" src="/img/telefono.svg" alt="telefono">
+                </a></li>
+
+                <!-- APARTADO INGRESAR -->
+                <li><a href="#">Ingresar
+                    <img class="icono" src="/img/usuario.svg" alt="usuario">
+                </a></li>
+
+                <!-- APARTADO BOLSA DE TRABAJO -->
+                <li><a href="#">Bolsa De Trabajo
+                    <img class="icono" src="/img/bolsa.svg" alt="usuario">
+                </a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="hero" id="hero">
+        <div class="hero-text"></div>
+        <button class="prev-button" onclick="changeBackgroundImage(-1)"><img src="/img/izquierda.svg" alt="Izquierda"></button>
+        
+        <button class="next-button" onclick="changeBackgroundImage(1)"><img src="/img/derecha.svg" alt="Derecha"></button>
+      </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
