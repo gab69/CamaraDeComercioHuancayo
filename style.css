@@ -39,9 +39,14 @@
   
   }
 
-
+ a{
+  height: 60px;
+ }
   img{
     height: 80px;
+  }
+  .logo{
+    height: 70px;
   }
   .icono{
     height: 20px;
@@ -70,9 +75,11 @@
 
   .header .navigation ul li a:hover{
     background-color: var(--boton);
+    border-bottom: 5px solid var(--segundario);
     z-index: 20;
-    
+   
   }
+ 
 
   .header .navigation ul li ul{
     position: absolute;
@@ -90,7 +97,7 @@
   .header .navigation ul li ul li ul{
     position:absolute;
     top: 0;
-    right: 300px;
+    right: -300px;
   }
 
   .header .navigation ul li ul li{
@@ -98,6 +105,7 @@
   }
   .header .navigation ul li:hover > ul{
      display: initial;
+     
      z-index: 30;
   }
 
@@ -113,11 +121,15 @@
       }
 
 
-      @media (max-width:950px ){
+      @media (max-width:720px ){
+        .prev-button,
+        .next-button {
+          display: none;
+        }
           .header label{
             display: initial;
           }
-
+        
           .header{
             padding: 20px 10%;
           }
@@ -157,7 +169,7 @@
       }
 
 
-      .hero {
+      .fondo {
         min-height: 100vh;
         background-image: url("img/hero.jpg");
         background-position: center center;
@@ -166,7 +178,7 @@
         position: relative;
       }
       
-      .hero::after {
+      .fondo::after {
         content: "";
         background-color: rgba(0, 0, 0, 0.5); 
         position: absolute;
@@ -177,7 +189,7 @@
       }
     
 
-      .hero {
+      .fondo {
         min-height: 100vh;
         background-position: center center;
         background-repeat: no-repeat;
@@ -207,7 +219,7 @@
       }
       
 
-      .hero-text {
+      .fondo-text {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -219,4 +231,46 @@
         z-index: 4;
       }
       
+      /* VENTANA DE MANTENIMIENTO */
 
+      .ventana{
+        background-color: var(--barraPrimaria);
+        height: 100vh;
+        position: relative;
+    
+        display: block;
+        padding: 150px 30%;
+      }
+      .ventana__contenedor{
+        
+        background-color: var(--boton);
+        height: 150px;
+        max-width:500px ;
+        min-width: 267px;
+        padding: 50px;
+        display: flex;
+        gap: 40px;
+        
+      }
+      @media (max-width:910px ){
+        .ventana__contenedor{
+        
+          text-align: center;
+          display: block;
+          
+          height: 200px;
+          padding: 20px;
+        }
+
+        .ventana{
+         
+          padding: 150px 10% 0 10%;
+        }
+      }
+
+
+       
+     
+.operador{
+  height: 200px;
+}

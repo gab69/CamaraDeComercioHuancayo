@@ -1,7 +1,7 @@
-const hero = document.getElementById('hero');
-const heroText = document.querySelector('.hero-text');
+const hero = document.getElementById('fondo');
+const heroText = document.querySelector('.fondo-text');
 const images = ['../img/hero.jpg', '../img/hero2.jpg']; // Rutas de las imágenes
-const texts = ['holllllllllllllllllllll', 'Texto para la imagen 2']; // Textos correspondientes a cada imagen
+const texts = ['Texto para la imagen 1', 'Texto para la imagen 2']; // Textos correspondientes a cada imagen
 let currentImageIndex = 0;
 let intervalId;
 
