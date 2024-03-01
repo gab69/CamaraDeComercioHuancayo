@@ -1,7 +1,7 @@
 const hero = document.getElementById('fondo');
 const heroText = document.querySelector('.fondo-text');
-const images = ['../img/hero.jpg', '../img/hero2.jpg']; // Rutas de las imágenes
-const texts = ['Texto para la imagen 1', 'Texto para la imagen 2']; // Textos correspondientes a cada imagen
+const images = ['../img/hero.jpg', '../img/hero2.jpg','../img/hero3.jpg']; // Rutas de las imágenes
+const texts = ['La Confianza Vuelve con liderazgo preparado', 'Disfruta de los diversos serviciosy convenios que ofrece la Cámara de comercio Huancayo','Conoce nuestros diversos ambientes tanto para tus eventos como para los de la Cámara']; // Textos correspondientes a cada imagen
 let currentImageIndex = 0;
 let intervalId;
 
@@ -25,3 +25,8 @@ document.querySelectorAll('button').forEach(button => {
     startInterval(); // Reiniciar el intervalo después de detenerlo
   });
 });
+
+
+
+
+
