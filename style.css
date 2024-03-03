@@ -205,10 +205,14 @@
         color: var(--primario);
         text-align: center;
         font-size: 40px;
-        padding: 20px;
         z-index: 4;
       }
-      
+      @media (max-width: 535px){
+          .fondo-text{
+            top: 50%;
+            font-size: 30px;
+          }
+      }
       .prev-button,.next-button {
         position: absolute;
         top: 50%;
