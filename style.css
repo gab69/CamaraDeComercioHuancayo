@@ -24,6 +24,7 @@
     min-height: 100vh;
     box-sizing: border-box;
     font-weight: 700;
+    background-color: var(--barraPrimaria);
   }
 
   .header{
@@ -209,7 +210,7 @@
       }
       @media (max-width: 535px){
           .fondo-text{
-            top: 50%;
+            top: 35%;
             font-size: 30px;
           }
       }
@@ -305,7 +306,7 @@
       /* VENTANA DE MANTENIMIENTO */
 
       .ventana{
-        background-color: var(--segundario);
+       
         height: 100vh;
         position: relative;
         display: block;
@@ -344,7 +345,7 @@
 
 /* Area de Nuestro EQUIPO */
 .equipo{
-  background-color: var(--segundario);
+  
  
   position: relative;
   display: block;
@@ -375,7 +376,7 @@ h1{
   opacity: 1;
 }
 .contenido__texto{
-  background-color: var(--barraPrimaria);
+  background-color: var(--boton);
   border-radius: 10px;
   display: inline-block;
   padding: 10px 40px;
@@ -415,7 +416,7 @@ h1{
   align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img{
-  width: 250px;
+  height: 100px;
 }
 .pie-pagina .grupo-1 .box h2{
   color: var(--primario);
@@ -458,4 +459,144 @@ h1{
       grid-gap:30px;
       padding: 35px 0px;
   }
+  .red-social{
+    text-align: center;
+  }
+}
+/* contacto */
+.contacto__titulo{
+  text-align: center;
+}
+.contacto__texto, .subtitulo-2{
+  display: block;
+  width: 200px;
+}
+.contacto__imagen{
+  background-image: url("/img/contacto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  background-size: 101%;
+
+}
+
+
+.contacto__cuerpo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  padding: 30px;
+}
+@media (max-width: 400px){
+  .contacto__cuerpo{
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
+}
+
+.dia, .hora{
+  display:inline-block;
+  padding: 10px 0 10px 0 ;
+
+}
+.contacto__info{
+  
+  width: 300px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.info__telefono, .info__correo{
+  height: 30px;
+}
+
+
+.linea{
+  width: 300px;
+  align-content: space-around;
+}
+.dias{
+  padding-left: 30px ;
+}
+
+.map {
+  width: 100%;
+}
+.subtitulo{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.area_informacion{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  padding: 30px 50px;
+  gap: 30px;
+  text-align: center;
+}
+@media (max-width:450px ){
+  .area_informacion{
+    text-align: start;
+  }
+    
+}
+.contacto__areas{
+  padding: 20px;
+}
+
+
+.area__titulo{
+  display: flex;
+
+}
+.opcion{
+  border: 3px solid var(--ColorTexto);
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-right: 20px;
+  box-shadow: 3px 3px 10px var(--ColorTexto);
+}
+/* formulario */
+.contacto__formulario{
+  border: 3px solid var(--ColorTexto);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 5px var(--ColorTexto);
+  max-width: 500px;
+  min-width: 100px;
+  text-align: center;
+}
+
+
+.controls {
+  width: 100%;
+  background-color: var(--barraSecundaria);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 2px solid var(--ColorTexto);
+  font-family: 'calibri';
+  font-size: 18px;
+  color: var(--ColorTexto);
+}
+
+
+
+
+.botons {
+  width: 50%;
+  background: var(--segundario);
+  border-radius: 20px;
+  border: none;
+  padding: 12px;
+  color:var(--primario);
+  margin: 16px 0;
+
+}
+.botons:hover{
+background-color: var(--variacionSegundario);
+}
+textarea {
+  resize: none;
+  height: 150px;
+ 
 }

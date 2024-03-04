@@ -12,7 +12,7 @@ function changeBackgroundImage(offset) {
 }
 
 function startInterval() {
-  intervalId = setInterval(() => changeBackgroundImage(1), 5000);
+  intervalId = setInterval(() => changeBackgroundImage(1), 3000);
 }
 
 // Iniciar el intervalo al cargar la página
