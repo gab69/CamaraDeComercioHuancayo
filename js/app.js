@@ -25,3 +25,5 @@ document.querySelectorAll('button').forEach(button => {
     startInterval(); // Reiniciar el intervalo después de detenerlo
   });
 });
+
+
