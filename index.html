@@ -1,165 +1,466 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/floating-wpp.js"></script>
- 
 
-</head>
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+    <!-- PIE DE PAGINA ICONOS -->
 
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <header class="header">
-        <a href="index.html"><img class="logo" src="/img/logo.png" alt="logo"></a>
+      <a href="index.html"
+        ><img class="logo" src="/img/logo.png" alt="logo"
+      /></a>
 
+      <input type="checkbox" id="toggle" />
 
-        <input type="checkbox" id="toggle">
+      <label for="toggle">
+        <img src="/img/menu.svg" class="menu" alt="menu" />
+      </label>
 
-        <label for="toggle">
-            <img src="/img/menu.svg" class="menu" alt="menu">
-        </label>
-
-
-        <nav class="navigation">
+      <nav class="navigation">
+        <ul>
+          <!-- APARTADO LA CAMARA -->
+          <li>
+            <a href="javascript:void(0)">
+              La Cámara <img class="icono" src="/img/home.svg" alt="home"
+            /></a>
             <ul>
-
-                <!-- APARTADO LA CAMARA -->
-                <li><a href="javascript:void(0)"> La Cámara
-                        <img class="icono" src="/img/home.svg" alt="home"></a>
-                    <ul>
-                        <li><a href="/secciones/camara/historia.html">Nuestra Historia</a></li>
-                        <li><a href="/secciones/camara/nosotros.html">Nosotros</a></li>
-                        <li><a href="/secciones/camara/areas.html">Nuestras Áreas</a></li>
-                        <li><a href="/secciones/camara/equipo.html">Nuestro Equipo</a></li>
-                        <li><a href="javascript:void(0)">Principios de La Camara</a>
-                            <ul>
-                                <li><a href="/secciones/camara/estatuto.html">Estatuto Digital</a></li>
-                                <li><a href="/secciones/camara/etica.html">Código de Ética</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- APARTADO NUESTROS SERVICIOS -->
-                <li><a href="javascript:void(0)">Nuestros Servicios
-                        <img class="icono" src="/img/maletin.svg" alt="maletin">
-                    </a>
-                    <ul>
-                        <li><a href="/secciones/servicios/servicios.html">Servicios</a></li>
-                        <li><a href="/secciones/servicios/arbitraje.html">Arbitraje</a></li>
-                        <li><a href="/secciones/servicios/capacitacion.htm">Capacitaciones Empresariales</a></li>
-                        <li><a href="/secciones/servicios/categoria.html">Categoria De La Cámara</a></li>
-                    </ul>
-                </li>
-                <!-- APARTADO MESA VIRTUAL -->
-                <li><a href="javascript:void(0)">Mesa Virtual
-                        <img class="icono" src="/img/manos.svg" alt="manos">
-                    </a>
-                    <ul>
-
-
-                        <li><a href="secciones/mesa-virtual/iniciar.html">Iniciar Sesión</a></li>
-                        <li><a href="secciones/mesa-virtual/asociados.html">Empresas Asociadas</a></li>
-                        <li><a href="secciones/mesa-virtual/pagos.html">Pagos</a></li>
-                    </ul>
-                </li>
-                <!-- APARTADO CONTACTOS -->
-                <li><a href="secciones/contactos/contacto.html">Contactos
-                        <img class="icono" src="/img/telefono.svg" alt="telefono">
-                    </a></li>
-
-                <!-- APARTADO INGRESAR -->
-                <li><a href="secciones/ingresar/ingresar.html">Ingresar
-                        <img class="icono" src="/img/usuario.svg" alt="usuario">
-                    </a></li>
-
-                <!-- APARTADO BOLSA DE TRABAJO -->
-                <li>
-                    <a href="javascript:void(0)">Bolsa De Trabajo
-                        <img class="icono" src="/img/bolsa.svg" alt="usuario" />
-                    </a>
-                    <ul>
-                        <li><a href="/secciones/bolsa/bolsa.html">Buscar Empleo</a></li>
-                        <li>
-                            <a href="/secciones/bolsa/admin.html">Publicar Empleo</a>
-                        </li>
-
-                    </ul>
-                </li>
-
+              <li>
+                <a href="/secciones/camara/historia.html">Nuestra Historia</a>
+              </li>
+              <li><a href="/secciones/camara/nosotros.html">Nosotros</a></li>
+              <li>
+                <a href="/secciones/camara/areas.html">Equipo Administrativo</a>
+              </li>
+              <li>
+                <a href="/secciones/camara/equipo.html">Junta Directiva</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">Principios de La Camara</a>
+                <ul>
+                  <li>
+                    <a href="/secciones/camara/estatuto.html"
+                      >Estatuto Digital</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/secciones/camara/etica.html">Código de Ética</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
-        </nav>
+          </li>
+
+          <!-- APARTADO NUESTROS SERVICIOS -->
+          <li>
+            <a href="javascript:void(0)"
+              >Nuestros Servicios
+              <img class="icono" src="/img/maletin.svg" alt="maletin" />
+            </a>
+            <ul>
+              <li>
+                <a href="/secciones/servicios/servicios.html">Servicios</a>
+              </li>
+              <li>
+                <a href="/secciones/servicios/empresarial.html"
+                  >Jueves Empresariales</a
+                >
+              </li>
+              <li>
+                <a href="/secciones/servicios/capacitacion.htm"
+                  >Capacitaciones Empresariales</a
+                >
+              </li>
+              <li>
+                <a href="/secciones/servicios/categoria.html"
+                  >Categoria De La Cámara</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <!-- APARTADO CONTACTOS -->
+          <li>
+            <a href="secciones/contactos/contacto.html"
+              >Quiero Afiliarme
+              <img class="icono" src="/img/telefono.svg" alt="telefono" />
+            </a>
+          </li>
+          <!-- APARTADO MESA VIRTUAL -->
+          <li>
+            <a href="javascript:void(0)"
+              >Mesa Virtual
+              <img class="icono" src="/img/manos.svg" alt="manos" />
+            </a>
+            <ul>
+              <li>
+                <a href="secciones/mesa-virtual/iniciar.html">Iniciar Sesión</a>
+              </li>
+              <li>
+                <a href="secciones/mesa-virtual/asociados.html">Asociados</a>
+              </li>
+              <li><a href="secciones/mesa-virtual/pagos.html">Pagos</a></li>
+              <li><a href="secciones/mesa-virtual/pagos.html">Tramites</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-
     <div class="fondo" id="fondo">
-        <div class="fondo-text"></div>
-        <button class="prev-button" onclick="changeBackgroundImage(-1)">
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-left"
-                    width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#3F2212" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z" />
-                </svg></div>
-        </button>
+      <div class="fondo-text"></div>
+      <button class="prev-button" onclick="changeBackgroundImage(-1)">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-badge-left"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#3F2212"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z" />
+          </svg>
+        </div>
+      </button>
 
-        <button class="next-button" onclick="changeBackgroundImage(1)">
-            <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-badge-right"
-                    width="52" height="52" viewBox="0 0 24 24" stroke-width="1.5" stroke="#3F2212" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M13 7h-6l4 5l-4 5h6l4 -5z" />
-                </svg></div>
-        </button>
+      <button class="next-button" onclick="changeBackgroundImage(1)">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-arrow-badge-right"
+            width="52"
+            height="52"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#3F2212"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M13 7h-6l4 5l-4 5h6l4 -5z" />
+          </svg>
+        </div>
+      </button>
     </div>
 
     <div class="Contenedor__ubicacion">
-        <div class="ubicacion">
-            <div>
-                <a href="./secciones/Contactos/contacto.html" class="contenedor__texto__icono">
+      <div class="ubicacion">
+        <div>
+          <a
+            href="./secciones/Contactos/contacto.html"
+            class="contenedor__texto__icono"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-map-pin"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#fff"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+              <path
+                d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+              />
+            </svg>
 
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="30"
-                        height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                    </svg>
-
-                    Av. Giráldez 634, Huancayo</a>
-            </div>
+            Av. Giráldez 634, Huancayo</a
+          >
         </div>
+      </div>
     </div>
 
-
     <div class="Contenedor__boton">
-
-
-        <a href="/secciones/conocer-mas.html" class="boton__link">
-            Conocer Más
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-zoom-filled" width="30"
-                height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                    d="M14 3.072a8 8 0 0 1 2.617 11.424l4.944 4.943a1.5 1.5 0 0 1 -2.008 2.225l-.114 -.103l-4.943 -4.944a8 8 0 0 1 -12.49 -6.332l-.006 -.285l.005 -.285a8 8 0 0 1 11.995 -6.643z"
-                    stroke-width="0" fill="currentColor" />
-            </svg>
-        </a>
-
+      <a href="/secciones/conocer-mas.html" class="boton__link">
+        Conocer Más
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-zoom-filled"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#fff"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path
+            d="M14 3.072a8 8 0 0 1 2.617 11.424l4.944 4.943a1.5 1.5 0 0 1 -2.008 2.225l-.114 -.103l-4.943 -4.944a8 8 0 0 1 -12.49 -6.332l-.006 -.285l.005 -.285a8 8 0 0 1 11.995 -6.643z"
+            stroke-width="0"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
     </div>
 
     <!-- Boton Whatsapp-->
     <div id="myButton"></div>
 
+    <!-- selecciond de opciones -->
+    <section class="opciones__presentacion">
+      <div class="contenedor__opciones">
+        <a href="#" class="opcion-presentacion">Presentacion</a>
+        <a href="#" class="opcion-presentacion">Quiero afiliarme</a>
+        <a href="#" class="opcion-presentacion">Preguntas Frecuentes</a>
+      </div>
+      <!-- SECCION BIENVENIDA -->
+      <div class="contenedor__bienvenida">
+        <div class="informacion">
+          <h2 class="texto-color">Presentacion</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            dolores tempora amet, accusamus ipsa, consequuntur reprehenderit
+            perferendis voluptatem, dignissimos soluta suscipit officiis dicta
+            ab optio quam culpa laboriosam eligendi sed?
+            <br /><br />
+            Le ofrecemos:
+            <br /><br />
+          </p>
+          <div class="informacion__servicios texto-color">
+            <a href="">Networking</a>
+            <a href="">Promocion y Publicidad</a>
+            <a href="">Comercio Exterior</a>
+            <a href="">Asesoria Empresarial</a>
+            <a href="">Directorio empresarial</a>
+            <a href="">Capacitaciones</a>
+            <a href="">Ambientes Exclusivos</a>
+            <a href="">informacion empresarial</a>
+          </div>
+          <div class="boton-beneficios">
+            CONOCE NUESTROS PAQUETES DE BENEFICIOS
+          </div>
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/YrxKq_EFqls?si=bnZHmymoQeI0AWWc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="video__presentacion"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- QUIERO SER SOCIO -->
+      <div class="contenedor__asociarme">
+        <h2>Quiero <span>ser Socio</span></h2>
+       <br>
+        <p>
+          Elimina barreras y empieza a contactarte con las empresas más grandes
+          de la ciudad ¡aquí estamos!
+        </p>
+        <br>
+        <h3>Beneficios</h3>
+        <div class="contenedor__beneficios">
+          <div class="beneficio">
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+          </div>
+          <div class="beneficio">
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+          </div>
+
+          <div class="beneficio">
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+            <p class="beneficio_individual">
+              Participa en los Comités Gremiales en los cuales puedes generar
+              oportunidades de negocios y actividades de networking.
+            </p>
+          </div>
+        </div>
+
+        <!-- formulario -->
+          <section class="main">
+
+            <figure class="main__figure">
+                <img src="../../img/logo.jpg" class="main__img">
+            </figure>
+    
+            <div class="main__contact">
+    
+                <form class="main__form">
+    
+                    <input type="text" placeholder="Nombre de la Empresa" class="main__input">
+                    <input type="text" placeholder="Nombre de la persona de contacto" class="main__input">
+                    <input type="text" placeholder="Número de RUC" class="main__input">
+                    <input type="email" placeholder="Ingrese su Correo electronico" class="main__input">
+                    <input type="text" placeholder="Ingrese su numero telefonico" class="main__input">
+                  
+    
+                    <input type="submit" value="Solicitar" class="main__input main__input--send">
+    
+                </form>
+    
+            </div>
+    
+        </section>
+        <!-- PREGUNTAS FRECUENTES -->
+
+        
+      </div>
+      <div class="faq-container">
+        <h2>PREGUNTAS FRECUENTES</h2>
+        <details>
+          <summary>
+            <span class="faq-title">
+              How long does the course take?
+            </span>
+            <img src="/img/plus.svg" class="expand-icon" alt="Plus">
+          </summary>        
+          <div class="faq-content">
+            The video content takes more than 4.5 hours. ...
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span class="faq-title">
+              Who teaches courses on Atheros Learning?
+            </span>
+            <img src="/img/plus.svg" class="expand-icon" alt="Plus">
+          </summary>        
+          <div class="faq-content">
+            The authors of the courses are mostly ...
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span class="faq-title">How is the course different from other UX/UI design courses?</span>
+            <img src="/img/plus.svg" class="expand-icon" alt="Plus">
+          </summary>        
+          <div class="faq-content">The key aspect is that this course provides a clear overview of the whole design process and principles, that represent necessary information for being successful within the industry. You will also get direct support from the author of this course, who is ready to answer all your questions and care about your next steps. Last but not least is the fact, that it's not only about video content, but you will also get access to the unique database of design resources and special offers from the partners of the course.</div>
+        </details>
+        <details>
+          <summary>
+            <span class="faq-title">Do I get a certificate after completing a course?</span>
+            <img src="/img/plus.svg" class="expand-icon" alt="Plus">
+          </summary>        
+          <div class="faq-content">Yes, after successfully finishing the quizzes within the course, you can download a certificate, proving all gained knowledge and skills.</div>
+        </details>
+        <details>
+          <summary>
+            <span class="faq-title">Are there any hidden fees within the course?</span>
+            <img src="/img/plus.svg" class="expand-icon" alt="Plus">
+          </summary>        
+          <div class="faq-content"> Absolutely not! You will gain all benefits and features with the one-time payment, unlocking the course.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <div>
+          <img src="/img/logo.png" alt="" />
+        </div>
+
+        <p class="footer-links">
+          <a href="#">Inicio</a>
+
+          |
+          <a href="#">Contactanos</a>
+          |
+          <a href="#">Libro de reclamaciones</a>
+        </p>
+
+        <p class="footer-company-name">
+          Copyright © 2024 <strong>Camara de comercio Huancayo</strong> todos
+          los derechos reservados
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Huancayo</span> Av. Giráldez N° 634</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+51 987654321</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="">xyz@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the company</span>
+          <strong>Sagar Developer</strong> is a Youtube channel where you can
+          find more creative CSS Animations and Effects along with HTML,
+          JavaScript and Projects using C/C++.
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
 
     <script src="./js/app.js"></script>
-</body>
-
+  </body>
 </html>

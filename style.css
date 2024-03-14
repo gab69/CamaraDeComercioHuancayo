@@ -7,10 +7,12 @@
      --segundario:#124C72;
      --variacionSegundario:#3280b4;
      --ColorTexto:#000;
-     --boton:#C2973E;
+     --boton:#BD973D;
      --barraPrimaria:#bbb7b7;
      --barraSecundaria:#f7e9e9;
-     --nav:#913C35;
+     --nav:#AD443D;
+     --fuentePrimaria:"League Spartan", sans-serif;
+     --fuenteSecundaria:"Montserrat", sans-serif;
 }
 
   *,
@@ -20,9 +22,15 @@
     padding: 0;
     box-sizing: inherit;
   }
+  h1,h2,h3,h4,span{
+    font-family: var(--fuentePrimaria);
+  }
+  p,a,div{
+    font-family: var(--fuenteSecundaria);
+  }
 
   body{
-    font-family: "PT Serif", sans-serif;
+   
     min-height: 100vh;
     box-sizing: border-box;
     font-weight: 700;
@@ -307,9 +315,187 @@
        }
       
 
-    
+    /* Seccion Presentacion */
+.contenedor__opciones{
+  background-color: var(--primario);
+  text-align: center;
+  margin: auto;
+ padding: 20px;
+}
+.opcion-presentacion{
+  text-decoration: none;
+  padding: 10px;
+  color: var(--boton);
+}
+.opcion-presentacion:hover{
+  border-bottom: var(--nav);
+  border-bottom: 3px solid var(--nav);
+}
+    .contenedor__bienvenida{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: center;
+      margin: 20px;
+     
+    }
+      .informacion{
+        text-align: start;
+        padding: 30px;
+        background-color: var(--primario);
+        
+      }
 
+div div div a{color: var(--nav);
+text-decoration: none;}
       
+
+      .informacion__servicios{
+        display: grid;
+       grid-template-columns: repeat(2, 1fr);
+ 
+   
+      }
+      .texto-color{
+color: var(--nav);
+      }
+.boton-beneficios{
+  background-color: var(--nav);
+  padding: 10px;
+  display: inline-block;
+ border-radius: 20px;
+ margin-left: 10%;
+ margin-right: 10%;
+}
+.video{
+  display: flex;
+  flex-direction: column;
+ 
+   justify-content: center;
+
+}
+ .video__presentacion{
+  padding: 15px;
+  background-color: var(--primario);
+  height: 350px;
+ 
+ }
+
+ /* seleccion de opciones */
+ .opciones__presentacion{
+  padding: 0 0 20px 0;
+  background-color: var(--barraPrimaria);
+ }
+
+
+ /* QUIERO SER SOCIO */
+.contenedor__asociarme{
+  background-color: var(--primario);
+  padding: 30px;
+}
+.contenedor__beneficios{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 20px;
+}
+.beneficio_individual{
+  padding: 20px;
+}
+.beneficio_individual:before {
+  content: "";
+  background-image: url("/img/flecha.svg");
+ background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 20px;
+  height:20px; 
+  
+}
+
+/* PREGUNTAS FRECUENTES */
+
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px;
+  background-color: var(--barraPrimaria);
+  text-align: center;
+}
+
+details {
+	font-size: 1rem;
+	margin: 0 auto;
+	width: 100%;
+	background: #F6FAFF;
+	border-radius: 0.5rem;
+	position: relative;
+	max-width: 600px;
+  border: 1px solid #C3DEFF;
+  transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+  border: 1px solid #A4A1FF;
+}
+
+
+summary {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  list-style: none;
+  padding: 1rem;
+  align-items: center;
+}
+
+summary:hover .faq-title {
+  opacity: 1;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+summary:hover .expand-icon {
+  opacity: 1;
+ 
+}
+
+.faq-title {
+  color: #1C2035;
+  width: 90%;
+  opacity: 0.65;
+  transition: all 250ms ease-in-out;
+}
+
+.faq-content {
+  color: #303651;
+  padding: 0.2rem 1rem 1rem 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.expand-icon {
+  opacity: 0.65;
+  height: 30px;
+}
+
+.expand-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 1rem;
+  transition: all 150ms ease-out;
+}
+
+
+
       /* VENTANA DE MANTENIMIENTO */
 
       .ventana{
@@ -597,75 +783,170 @@ h1{
 
 
 /******************************************************************************************Pie de Pagina******************************************/
-.pie-pagina{
-  width: 100%;
-  background-color: var(--nav);
+footer {
+  position: fixed;
+  bottom: 0;
 }
-.pie-pagina .grupo-1{
+
+@media (max-height:800px) {
+  footer {
+      position: static;
+  }
+  header {
+      padding-top: 40px;
+  }
+}
+
+.footer-distributed {
+  background-color: #2d2a30;
+  box-sizing: border-box;
   width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap:50px;
-  padding: 45px 0px;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px;
  
 }
-.pie-pagina .grupo-1 .box figure{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-  height: 100px;
-}
-.pie-pagina .grupo-1 .box h2{
-  color: var(--ColorTexto);
-  margin-bottom: 25px;
-  font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-  color:var(--ColorTexto);
-  margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
   display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
   text-decoration: none;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  color: var(--ColorTexto);
-  margin-right: 10px;
-  background-color: var(--primario);
-  text-align: center;
-  transition: all 300ms ease;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+  --plomo:#33383b;
+}
+
+.footer-distributed .footer-center i {
+  background-color: var(--plomo);
+  color: var(--primario);
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-  color: var(--boton);
-}
-.pie-pagina .grupo-2{
-  background-color: var(--ColorTexto);
-  padding: 15px 10px;
   text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: var(--primario);
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: var(--boton);
+  text-decoration: none;
+  ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: var(--barraPrimaria);
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: var(--primario);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--boton);
+  border-radius: 2px;
+  font-size: 20px;
+  color: var(--primario);
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: var(--nav);
+}
+
+.footer-links a:hover {
   color: var(--nav);
 }
-.pie-pagina .grupo-2 small{
-  font-size: 15px;
-}
-@media screen and (max-width:800px){
-  .pie-pagina .grupo-1{
-      width: 90%;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap:30px;
-      padding: 35px 0px;
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
   }
-  .red-social{
-    text-align: center;
+  .footer-distributed .footer-center i {
+      margin-left: 0;
   }
-}
+}       
+      
 
 /*************************************************************** AREA NUESTROS SERVICIOS ********************************************************/
 
