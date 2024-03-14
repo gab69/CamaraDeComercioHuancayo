@@ -1,0 +1,1317 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+:root{
+ 
+     --primario:#fff;
+     
+     --segundario:#124C72;
+     --variacionSegundario:#3280b4;
+     --ColorTexto:#000;
+     --boton:#C2973E;
+     --barraPrimaria:#bbb7b7;
+     --barraSecundaria:#f7e9e9;
+     --nav:#913C35;
+}
+
+  *,
+  *::before,
+  *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  body{
+    font-family: "PT Serif", sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-weight: 700;
+    background-color: var(--barraPrimaria);
+  }
+
+  .header{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: var(--nav);
+    padding: 0 1%;
+    align-items: center;
+   justify-content: space-between;
+    z-index: 10;
+    display: flex;
+   
+  
+  }
+
+
+ a{
+  height: 60px;
+
+ }
+  img{
+    height: 80px;
+  }
+  .logo{
+    height: 70px;
+  }
+  .icono{
+    height: 20px;
+    padding-left: 5px;
+  }
+ 
+
+  .navigation ul{
+    list-style: none;
+
+  }
+
+  .header .navigation ul li{
+    float:left;
+    position: relative;
+  }
+
+  .header .navigation ul li a{
+    font-size: 18px;
+    color: var(--primario);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: all .2s ease;
+  }
+
+ 
+
+  .header .navigation ul li a:hover{
+    background-color: var(--boton);
+    border-bottom: 5px solid var(--segundario);
+    z-index: 20;
+   
+  }
+ 
+
+  .header .navigation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: var(--barraSecundaria);
+    display: none;
+  }
+  .header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #000;
+  }
+  
+  .header .navigation ul li ul li ul{
+    position:absolute;
+    top: 0;
+    right: -300px;
+  }
+
+  .header .navigation ul li ul li{
+     width: 100%;
+  }
+  .header .navigation ul li:hover > ul{
+     display: initial;
+     
+     z-index: 30;
+  }
+
+      #toggle,
+      .header label{
+        display: none;
+        cursor:pointer;
+      }
+
+      .menu{
+        width: 45px;
+        height: 35px;
+      }
+
+
+      @media (max-width:720px ){
+        .prev-button,
+        .next-button {
+          display: none;
+        }
+          .header label{
+            display: initial;
+          }
+        
+          .header{
+            padding: 20px 10%;
+          }
+          .header .navigation{
+            position: absolute;
+            top:100%;
+            left:0;
+            background-color: var(--barraPrimaria);
+            display: none;
+            text-align: center;
+          }
+          .header .navigation ul li{
+            width: 100%;
+          }
+          .header .navigation ul li a{
+            padding: 8px 30px 8px 10%;
+          }
+          .header .navigation ul li ul{
+            position: relative;
+            width: 100%;
+            left:0;
+          }
+          .header .navigation ul li ul li{
+            background-color: var(--barraSecundaria);
+            text-align: center;
+          }
+          .header .navigation ul li ul li ul{
+            position: relative;
+            width: 100%;
+            left: 0;
+          }
+
+          #toggle:checked ~ .navigation{
+            display: block;
+          }
+
+      }
+      /* cuerpo */
+
+      .fondo {
+        min-height: 100vh;
+        background-image: url("img/hero.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      
+      .fondo::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5); 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    
+
+      .fondo {
+        min-height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .fondo-text {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--primario);
+        text-align: center;
+        font-size: 40px;
+        z-index: 4;
+      }
+      @media (max-width: 535px){
+          .fondo-text{
+            top: 35%;
+            font-size: 30px;
+          }
+      }
+      .prev-button,.next-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 20px;
+        background-color: var(--boton);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 3;
+      }
+      .prev-button {
+        opacity: 0.5;
+      }
+      .next-button {
+        opacity: 0.5;
+      }
+      .next-button:hover{
+        opacity:1
+      }
+      .prev-button:hover{
+        opacity:1
+      }
+
+      
+      .prev-button {
+        left: 20px;
+      }
+      
+      .next-button {
+        right: 20px;
+      }
+      /* enlace ubicacion */
+      .Contenedor__ubicacion {
+       z-index: 4;
+       position: absolute;
+       bottom:200px;
+       width: 100%;
+       height: 40px;
+       text-align: end;
+       padding: 0 10%;
+      }
+    
+      .boton__link{
+        background-color: var(--nav);
+        padding: 20px;
+        border-radius: 50px;
+      }
+      
+      .contenedor__texto__icono, .boton__link{
+        text-decoration: none;
+        color: var(--primario);
+        font-size: 20px;
+      
+      }
+
+      .contenedor__texto__icono:hover{
+        border-bottom: 3px solid var(--primario);
+      }
+
+
+      .Contenedor__boton {
+        z-index: 4;
+        position: absolute;
+        bottom:160px;
+        width: 100%;
+        height: 40px;
+        text-align: start;
+        padding: 0 10%;
+       }
+
+       .boton__link:hover{
+        background-color: var(--variacionSegundario);
+       }
+
+       @media (max-width:640px ){
+        .Contenedor__boton{
+          bottom:40px;
+        }
+        .Contenedor__ubicacion {
+          bottom: 120px;
+        }
+
+       }
+      
+
+    
+
+      
+      /* VENTANA DE MANTENIMIENTO */
+
+      .ventana{
+       
+        height: 100vh;
+        position: relative;
+        display: block;
+        padding: 150px 30%;
+      }
+      .ventana__contenedor{
+        
+        background-color: var(--boton);
+        height: 150px;
+        max-width:500px ;
+        min-width: 267px;
+        padding: 50px;
+        display: flex;
+        gap: 40px;
+        
+      }
+      @media (max-width:910px ){
+        .ventana__contenedor{
+        
+          text-align: center;
+          display: block;
+          
+          height: 200px;
+          padding: 20px;
+        }
+
+        .ventana{
+         
+          padding: 150px 10% 0 10%;
+        }
+      }  
+.operador{
+  height: 200px;
+}
+
+/************************************************************************** CONOCER MAS **********************************************************/
+.contenedor__conocer {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 20px;
+ text-align: center;
+  padding: 0 10%;
+}
+
+.imagen__conocer{
+  background-image: url("/img/fondo-biblioteca.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 300px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.img__conocer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+  margin: 20px;
+}
+.img1{
+  width: 200px;
+  height: 200px;
+ 
+}
+/************************************************************************** LA CAMARA ************************************************************/
+/* AREA HISTORIA */
+.contenedor__historia {
+  width: 100%;
+  margin-top: 120px;
+  text-align: center;
+  padding: 0 10%;
+}
+.descripcion-historia {
+padding: 20px;
+text-align: justify;
+}
+.galeria {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.galeria__imagen {
+  width: 100%;
+  
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo__blanco{
+  background-color: var(--barraSecundaria);
+}
+
+.galeria__imagen img {
+  height: 90%;
+}
+
+/* AREA NOSOTROS */
+
+.contenedor__nosotros {
+  width: 100%;
+  margin-top: 120px;
+  text-align: center;
+}
+
+.contenido__nosotros{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+.imagen__nosotros1{
+  
+ height: 250px;
+max-width: 80%;
+}
+.texto__nosotros{
+  margin: auto;
+  padding-right: 80px;
+  text-align: start;
+}
+.imagen__nosotros{
+  text-align: end;
+}
+
+@media (max-width: 650px){
+  .imagen__nosotros{
+    text-align: center;
+  }
+  .texto__nosotros{
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+
+
+/* AREA NUESTRAS AREAS */
+.contenedor__areas{
+  width: 80%;
+  margin-top: 120px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.caja{
+  position: relative;
+  width: 50%; /*ancho de la caja*/
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imagenes__areas{
+  display: flex;
+  width: 100%;
+}
+
+.imagenes__areas img{
+  height: 350px;
+  width: 100%; /*700px*/
+  transition: all 1s ease;
+}
+
+@media (max-width: 650px){
+  .imagenes__areas img{
+    height: 150px;
+    width: 100%;
+    transition: all 1s ease;
+  }
+}
+
+.imagenes__areas input{
+  display: none;
+}
+
+.dot{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.dot label{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: solid #fff 3px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 5px;
+}
+
+.dot label:hover{ /*efecto cuando pasa el cursor*/
+  background: #fff;
+}
+
+#img1:checked ~ .m1{  /*id img1 de la clase m1*/
+  margin-left: 0;
+}
+
+#img2:checked ~ .m2{  /*id img1 de la clase m1*/
+  margin-left: -100%;
+}
+
+#img3:checked ~ .m3{  /*id img1 de la clase m1*/
+  margin-left: -200%;
+}
+
+#img4:checked ~ .m4{  /*id img1 de la clase m1*/
+  margin-left: -300%;
+}
+
+
+/* Area de Nuestro EQUIPO */
+.equipo{
+  
+ 
+  position: relative;
+  display: block;
+  padding: 100px 10%;
+}
+span{
+  color: var(--boton);
+}
+
+.equipo{
+  text-align: center;
+}
+h1{
+ 
+  padding-bottom: 20px;
+}
+.equipo__imagen{
+  border-radius: 50%;
+  border: 3px solid var(--ColorTexto);
+  height: 200px;
+ 
+ 
+}
+.equipo__contenido_target{
+  opacity: 0.6;
+}
+.equipo__contenido_target:hover{
+  opacity: 1;
+}
+.contenido__texto{
+  background-color: var(--nav);
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 40px;
+  margin-bottom: 50px;
+  margin-top: -25px;
+}
+
+
+
+.consejo, .comite{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+/* AREA ESTATUTO DIGITAL */ 
+.contenedor__estatuto{
+  width: 80%;
+  margin-top: 120px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+/******************************************************************************************Pie de Pagina******************************************/
+.pie-pagina{
+  width: 100%;
+  background-color: var(--nav);
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:50px;
+  padding: 45px 0px;
+ 
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+  height: 100px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: var(--ColorTexto);
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color:var(--ColorTexto);
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: var(--ColorTexto);
+  margin-right: 10px;
+  background-color: var(--primario);
+  text-align: center;
+  transition: all 300ms ease;
+  border-radius: 50%;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: var(--boton);
+}
+.pie-pagina .grupo-2{
+  background-color: var(--ColorTexto);
+  padding: 15px 10px;
+  text-align: center;
+  color: var(--nav);
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+@media screen and (max-width:800px){
+  .pie-pagina .grupo-1{
+      width: 90%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap:30px;
+      padding: 35px 0px;
+  }
+  .red-social{
+    text-align: center;
+  }
+}
+
+/*************************************************************** AREA NUESTROS SERVICIOS ********************************************************/
+
+/* servicios se repite de Nosotros */
+/* arbitraje */
+/* AREA DE CAPACITACIONES */
+
+.contenedor__capacitaciones{
+  width: 80%;
+  margin-top: 120px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.contenedor__capacitaciones1{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+  gap: 20px;
+  
+}
+
+@media screen and (max-width:500px){
+  .contenedor__capacitaciones1{
+
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+   
+    
+  }
+}
+.video__capacitaciones{
+  border-bottom: 40px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+
+.target__capacitaciones{
+  background-color: var(--barraSecundaria);
+  border-radius: 10px;
+  border: 2px solid var(--ColorTexto);
+  max-width: 400px;
+  padding: 0 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* AREA CATEGORIA DE LA CAMARA  se repite de areas*/
+
+
+/********************************************************************* MESA VIRTUAL *************************************************************/
+
+
+/* AREA INCIAR SESION*/
+/* SE ESTA REPITIENDO DE INGRESAR */
+
+
+
+/* AREA EMPRESAS ASOCIADAS */
+.asociados__contenedor{
+  width: 80%;
+  margin-top: 120px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+.asociados__contenedor1{
+ 
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+ 
+}
+
+.asociados__card{
+  text-align: center;
+  margin: 20px; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  background: var(--primario);
+  box-shadow: 0px 1px 10px var(--ColorTexto);
+  cursor: default; 
+  transition: all 400ms ease;
+  
+}
+
+.asociados__card:hover{
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.4); 
+  transform: translateY(-3%); 
+}
+
+.asociados__card img{ 
+  margin: 20px;
+  height: 70px; 
+  padding: 15px;
+}
+@media (max-width:780px ){
+  .asociados__card img{ 
+ 
+    height: 90px; 
+  }
+}
+
+.asociados__card .asociados__texto{
+  padding: 0 15px 15px 15px; 
+  text-align: center; 
+}
+.asociados__card .asociados__texto p{
+  line-height: 1.5;
+  color: var(--ColorTexto);
+
+}
+.asociados__card .asociados__texto p{
+  font-weight: 400; 
+}
+
+.asociados__contenedor .asociados__card .asociados__texto .ver_mas{
+  margin-top: 10px;
+  text-decoration: none; 
+  display: inline-block;
+  padding: 10px;
+  height: 40px;
+  
+  color: var(--ColorTexto);
+  border: 3px solid var(--boton);
+  border-radius: 4px; 
+  transition: all 400ms ease;
+}
+
+.asociados__card .asociados__texto a:hover{
+  background: var(--nav); 
+ 
+}
+
+/* empresa asociada Informacion individual  pero el formulario se repite de contactos*/
+.empresa1{
+  background-image: url("img/fondo-coca.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  background-size: 101%;
+  margin-top: 60px;
+}
+
+
+/* PAGOS */
+
+.contenedor__pagos{
+  width: 80%;
+  margin-top: 120px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+
+.tiposdepago{
+  background-color: var(--primario);
+  height: 400px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+@media (max-width:450px ){
+  .tiposdepago{ 
+    height: 250px;
+    
+  }
+  
+}
+
+.pago{
+border-radius: 10px;
+border: 2px solid var(--ColorTexto);
+box-shadow: 0 0 10px var(--segundario);
+
+  
+ background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+
+
+}
+.yape{
+  background-image: url("/img/yape.png");
+  
+}
+.plin{
+  background-image: url("/img/plin.png");
+ 
+}
+.visa{
+  background-image: url("/img/visa.png");
+}
+.paypal{
+  background-image: url("/img/paypal.png");
+}
+
+.yape:hover{
+  background-image: url("/img/qr.jfif");
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+.plin:hover{
+  background-image: url("/img/qr.jfif");
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+.paypal:hover{
+  background-image: url("/img/qr.jfif");
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+.visa:hover{
+  background-image: url("/img/qr.jfif");
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+
+
+
+
+
+
+/************************************************************** AREA  contactos ****************************************************************/
+.contacto__titulo{
+  text-align: center;
+}
+.contacto__texto, .subtitulo-2{
+  display: block;
+  width: 200px;
+}
+.contacto__imagen{
+  background-image: url("/img/contacto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  background-size: 101%;
+
+}
+
+
+.contacto__cuerpo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  padding: 30px;
+}
+@media (max-width: 400px){
+  .contacto__cuerpo{
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
+}
+
+.dia, .hora{
+  display:inline-block;
+  padding: 10px 0 10px 0 ;
+
+}
+.contacto__info{
+  
+  width: 300px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.info__telefono, .info__correo{
+  height: 30px;
+}
+
+
+.linea{
+  width: 300px;
+  align-content: space-around;
+}
+.dias{
+  padding-left: 30px ;
+}
+
+.map {
+  width: 100%;
+}
+.subtitulo{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.area_informacion{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  padding: 30px 50px;
+  gap: 30px;
+  text-align: center;
+}
+@media (max-width:450px ){
+  .area_informacion{
+    text-align: start;
+  }
+    
+}
+.contacto__areas{
+  padding: 20px;
+}
+
+
+.area__titulo{
+  display: flex;
+
+}
+.opcion{
+  border: 3px solid var(--ColorTexto);
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-right: 20px;
+  box-shadow: 3px 3px 10px var(--ColorTexto);
+}
+/* formulario */
+.contacto__formulario{
+  border: 3px solid var(--ColorTexto);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 5px var(--ColorTexto);
+  max-width: 500px;
+  min-width: 100px;
+  height: 450px;
+  text-align: center;
+}
+
+
+.controls {
+  width: 100%;
+  background-color: var(--barraSecundaria);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 2px solid var(--ColorTexto);
+  font-family: 'calibri';
+  font-size: 18px;
+  color: var(--ColorTexto);
+}
+
+
+
+
+.botons {
+  width: 50%;
+  background: var(--nav);
+  border-radius: 20px;
+  border: none;
+  padding: 12px;
+  color:var(--primario);
+  margin: 16px 0;
+
+}
+.botons:hover{
+background-color: var(--primario);
+color: var(--nav);
+border: 3px solid var(--nav)
+}
+textarea {
+  resize: none;
+  height: 150px;
+ 
+}
+
+/***************************************************************** AREA INGRESAR **************************************************************/
+
+/* REGISTRA E INICIAR SESION */
+
+.main{
+  margin: 130px auto 20px auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: var(--barraPrimaria);
+  border-radius: 10px;
+  border: 4px solid var(--ColorTexto);
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--ColorTexto);
+  
+ 
+
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: .6em;
+
+  animation: mostrar 1.5s ease-in-out;
+}
+
+@keyframes mostrar {
+  0%{
+      opacity: 0;
+  }
+
+  100%{
+      opacity: 1;
+  }
+}
+
+.main__figure{
+margin: auto;
+
+}
+.main__img{
+  max-width: 400px;
+
+  height:300px;
+  
+  border-radius: 20px;
+}
+
+
+
+.main__contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 3em .7em;
+  text-align: center;
+}
+
+.main__form{
+  display: grid;
+  justify-items: center;
+  gap: 1.5em;
+}
+
+.main__input{
+  width: 80%;
+  max-width: 500px;
+  outline: none;
+  border: none;
+  padding: 1em;
+  font: inherit;
+  border-radius: .6em;
+}
+
+.main__input--send{
+  background-color: var(--nav);
+  color: var(--primario);
+  font-weight: 600;
+}
+.main__input--send:hover{
+  background-color: var(--primario);
+  color: var(--nav);
+}
+
+@media (max-width:412px ){
+  .main__form{
+    justify-items: start;
+ 
+  }
+
+  .main__img{
+    
+  
+    height:200px;
+   
+  }
+  .main__figure{
+    margin: 10%;
+    width: 200px;
+    }
+    .main__contact{
+      padding-top: 0;
+    }
+
+}
+
+/******************************************************************** Seccion BOlsa de trabajo *************************************************/
+.contenedor__bolsa{
+ 
+  margin-top: 120px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+
+
+.contenedor__filtro{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
+  gap: 20px;
+}
+
+.estados{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)) ;
+  gap: 20px;
+}
+
+/* aside BOLSA DE TRABAJO */
+
+.aside{
+  background-color: var(--primario);
+  padding: 30px;
+  border-bottom: 5px solid var(--ColorTexto);
+}
+
+
+
+
+
+/* SECCION CLIENTE */
+
+
+.ofertas__target {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  gap: 20px;
+  width: 90%;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+.target__contenido{
+  
+  background-color: var(--primario);
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid var(--ColorTexto);
+  box-shadow: 0 0 10px var(--ColorTexto);
+}
+.target__oferta {
+ 
+  padding: 24px;
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s ease-out;
+  
+}
+.target__texto{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contenedor__boton{
+  width: 100%;
+
+  text-align: center;
+  
+}
+.boton{
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: var(--nav);
+  color: var(--primario);
+  border-radius: 20px;
+  
+}
+
+
+.target__oferta:hover::before {
+  opacity: 1;
+}
+
+.target__oferta:hover .team-text {
+  opacity: 1;
+
+}
+
+.target__oferta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.target__oferta img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.target__oferta .team-text{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    
+    transition: 0.5s;
+}
+.team-text h2{
+    margin: 0;
+
+    letter-spacing: 3px;
+}
+
+.team-text p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    font-family:cursive;
+}
+
+.team-text a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 2px solid var(--primario);
+    border-radius:  50%;
+   
+}
+
+.team-text a i{
+    color: var(--primario);
+    padding: 6px 8px;
+}
+
+.team-text a:hover{
+  background-color: var(--boton);
+ 
+}
+
+/* PUBLICAR EMPLEO */
