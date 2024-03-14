@@ -26,4 +26,26 @@ document.querySelectorAll('button').forEach(button => {
   });
 });
 
+// Edicion del apartado Whatsapp
+$(function () {
+  $('#myButton').floatingWhatsApp({
+      phone: '51965056239',
+      popupMessage: 'Holaaaaaa',
+      message: "Alguna consulta?",
+      showPopup: true,
+      showOnIE: false,
+      headerTitle: 'Welcome!',
+      headerColor: '#25D366',
+      backgroundColor: 'white',
+      buttonImage: '<img src="img/whatsapp_1.svg" />',
+      size: '60px', // Tamaño del icono
+      position: "right", // Posición del icono
+      avatar: 'https://static.vecteezy.com/system/resources/previews/000/495/253/original/vector-support-agent-line-black-icon.jpg', // URL imagen avatar
+      avatarName: 'Pedro', // Nombre del avatar
+      avatarRole: 'Soporte', // Rol del avatar
+      //autoOpenTimeout: 1000,
+      zIndex: '11111',
+  });
+});
+
 
