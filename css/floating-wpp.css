@@ -10,8 +10,8 @@
   border-radius: 50%;
   box-shadow: 1px 1px 4px rgba(60, 60, 60, 0.4);
   transition: box-shadow 0.2s;
-  cursor: pointer;
-  overflow: hidden;
+  cursor: progress;
+  overflow:initial;
 }
 .floating-wpp .floating-wpp-button img,
 .floating-wpp .floating-wpp-button svg {
